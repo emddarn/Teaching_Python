@@ -2,8 +2,8 @@ import math
 
 
 def main():
-    # learn_str_func(False)
-    learn_number_func(True)
+    learn_str_func(False)
+    # learn_number_func(True)
     # learn_list_tuple_set_func(True)
     # learn_dictionary_func(True)
     # learn_if_elif_else(True)
@@ -11,82 +11,82 @@ def main():
 
 
 def learn_loops(isLearning):
-    i = 0
-    while i < 6:
-        i += 1
-        if i == 2:
-            continue
-        if i == 4444444:
-            break
-        # i += 1 # infinite loop at 2 if increment is here
-        print(i)
-    else:
-        print("i is no longer less than 6")
+    # i = 0
+    # while i < 6:
+    #     i += 1
+    #     if i == 2:
+    #         continue
+    #     if i == 4444444:
+    #         break
+    #     # i += 1 # infinite loop at 2 if increment is here
+    #     print(i)
+    # else:
+    #     print("i is no longer less than 6")
 
 
 def learn_if_elif_else(isLearning):
-    while True:
-        user_input = input("Enter a number (or 'q' to quit): ")
-        if user_input == "q":
-            print("Exiting infinite loop...q")
-            break
-        else:
-            num = float(user_input)
-            if num >= 0:
-                if num == 0:
-                    print("Zero")
-                elif num > 0 and num <= 10:
-                    print("In the range 1 to 104")
-                else:
-                    print("Positive number")
-            else:
-                print("Negative number")
+    # while True:
+    #     user_input = input("Enter a number (or 'q' to quit): ")
+    #     if user_input == "q":
+    #         print("Exiting infinite loop...q")
+    #         break
+    #     else:
+    #         num = float(user_input)
+    #         if num >= 0:
+    #             if num == 0:
+    #                 print("Zero")
+    #             elif num > 0 and num <= 10:
+    #                 print("In the range 1 to 104")
+    #             else:
+    #                 print("Positive number")
+    #         else:
+    #             print("Negative number")
 
 
 def learn_dictionary_func(learn):
-    student = {
-        1: "one",
-        "name": "Andy",
-        "age": 12,
-        "courses": ["Bangla", "English", "Math", "Physics"],
-    }
-    print(student)
-    print(
-        f"{student['name']} is {student['age']} years old. He's studying {student['courses']}"
-    )
-    # print(student["phone"])
-    print(
-        f"{student.get('name')} is {student.get('age')} years old. He's studying {student.get('courses')}. His mobile no is {student.get('phone')} or {student.get('phone', 'UNKNOWN')}"
-    )
-
-    student["phone"] = "0404040404"  # add key-value
-    print(student)
-
-    student["name"] = "Bridget"  # update value
-    print(student)
-
-    new_info = {"name": "Charlie", "enrolled": True}
-    student.update(new_info)
-    print(student)
-
-    # del student[1]
+    # student = {
+    #     1: "one",
+    #     "name": "Andy",
+    #     "age": 12,
+    #     "courses": ["Bangla", "English", "Math", "Physics"],
+    # }
     # print(student)
-    popped_info = student.pop(1)
-    print(popped_info, ": ", student)
+    # print(
+    #     f"{student['name']} is {student['age']} years old. He's studying {student['courses']}"
+    # )
+    # # print(student["phone"])
+    # print(
+    #     f"{student.get('name')} is {student.get('age')} years old. He's studying {student.get('courses')}. His mobile no is {student.get('phone')} or {student.get('phone', 'UNKNOWN')}"
+    # )
 
-    print(len(student))
+    # student["phone"] = "0404040404"  # add key-value
+    # print(student)
 
-    print(student.keys())
+    # student["name"] = "Bridget"  # update value
+    # print(student)
 
-    print(student.values())
+    # new_info = {"name": "Charlie", "enrolled": True}
+    # student.update(new_info)
+    # print(student)
 
-    print(student.items())
+    # # del student[1]
+    # # print(student)
+    # popped_info = student.pop(1)
+    # print(popped_info, ": ", student)
 
-    for key in student:
-        print(key)
+    # print(len(student))
 
-    for key, value in student.items():
-        print(key, ": ", value)
+    # print(student.keys())
+
+    # print(student.values())
+
+    # print(student.items())
+
+    # for key in student:
+    #     print(key)
+
+    # for key, value in student.items():
+    #     print(key, ": ", value)
 
 
 def learn_list_tuple_set_func(learn):
