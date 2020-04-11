@@ -4,7 +4,7 @@ print("In calculator.py")
 
 
 def add(x, y):
-    pass
+    return x + y
 
 
 def subtract(x, y):
@@ -19,12 +19,16 @@ def divide(x, y):
     pass
 
 
-def greet(greeting, name="World"):
-    msg = f"{greeting} {name}"
+sum = add(5, 9)
+
+
+def greet(greeting, msg="How are you?", name="World"):
+    msg = f"{greeting} {name}. {msg}"
     print(msg)
     return msg
 
 
+# not discussed yet
 def student_info(arg1, *args, **kwargs):
     print(arg1)
     print(args)
@@ -35,9 +39,15 @@ def student_info(arg1, *args, **kwargs):
     #     print(key, value)
 
 
-# greet("Hello")
+greetings = greet("Hi", "Universe")  # Hi World. Universe
+print("greetings: ", greetings)
+greetings = greet("Hi", name="Universe")  # Hi Universe. How are you?
+print("greetings: ", greetings)
+
+
 # student_info('English', 'Bangla', 'Physics', 'Math', name='Andy', age=25)
 
+# Example of unpacking
 # courses = ["Bangla", "Physics", "Math"]
 # info = {"name": "Andy", "age": 25}
 # print(info)

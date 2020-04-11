@@ -4,20 +4,30 @@ print("Hellow World from func_def")
 
 
 def learn_loops(isLearning):
+    if not isLearning:
+        return
+    for i in range(10):  # for(int i=0;i<=10;i++){.....}
+        print(i)
+
+    print("\n Learning while loop")
     i = 0
     while i < 6:
         i += 1
-        if i == 2:
-            continue
-        if i == 4444444:
-            break
+        if i == 4:  # There's no switch in Python
+            print("==4")
+        elif i > 2:
+            print("in > 2")  # jump back to while
         # i += 1 # infinite loop at 2 if increment is here
-        print(i)
+        else:
+            print(i)
     else:
         print("i is no longer less than 6")
 
 
 def learn_if_elif_else(isLearning):
+    if not isLearning:
+        return
+
     while True:
         user_input = input("Enter a number (or 'q' to quit): ")
         if user_input == "q":
@@ -29,14 +39,17 @@ def learn_if_elif_else(isLearning):
                 if num == 0:
                     print("Zero")
                 elif num > 0 and num <= 10:
-                    print("In the range 1 to 104")
+                    print("In the range 1 to 10")
                 else:
                     print("Positive number")
             else:
                 print("Negative number")
 
 
-def learn_dictionary_func(learn):
+def learn_dictionary_func(isLearning):
+    if not isLearning:
+        return
+
     student = {
         1: "one",
         "name": "Andy",
@@ -64,7 +77,7 @@ def learn_dictionary_func(learn):
 
     # del student[1]
     # print(student)
-    popped_info = student.pop(1)
+    popped_info = student.pop(1)  # key 1
     print(popped_info, ": ", student)
 
     print(len(student))
@@ -90,9 +103,11 @@ def learn_list_tuple_set_func(learn):
     fruits = ["apple", "banana", "cherry", "dates"]
     print(fruits)
     print(len(fruits))
-    print(f"{fruits[0]} {fruits[3]}")  # 0 = apple, 3 = dates
+    print("{0}, {1}".format(fruits[0], fruits[3]))  # 0 = apple, 3 = dates
+    print("{0[0]}, {0[3]}".format(fruits))  # 0 = apple, 3 = dates
+    print(f"{fruits[0]}, {fruits[3]}")  # 0 = apple, 3 = dates
     print(
-        f"{fruits[-1]} {fruits[-3]}"
+        f"I like {fruits[-1]} and {fruits[-3]}"
     )  # - means opposite direction and 0 = apple; -1 is always the end of the list
     print(fruits[0:2])  # 0, 1
     print(fruits[:2])  # empty before : => start of the list
@@ -110,7 +125,7 @@ def learn_list_tuple_set_func(learn):
 
     new_fruits = ["fig", "grapes"]
     print(new_fruits)
-    print(*new_fruits)
+    print(*new_fruits)  # easy way to convert to string
 
     fruits.append(new_fruits)
     print(fruits)
@@ -138,7 +153,7 @@ def learn_list_tuple_set_func(learn):
     print(sorted(fruits), " - ", fruits)  # sorted() is not in-place
 
     print(fruits.index("cherry"))
-    print("cherry" in fruits)
+    print("cherry" in fruits)  # membership test
 
     # print(fruits.index("grapes"))  # generates error
     print("grapes" in fruits)  # safe
@@ -165,7 +180,7 @@ def learn_list_tuple_set_func(learn):
     #         first                         last
     # for forward (+step): start=0, end=end
     # for reverse (-step): start=last, end=0
-    # step1: identify direction in step, step2: identify start and end,
+    # step1: identify direction, step2: identify start and end,
     # step3: identify step
     print(numbers[:])  # list[start:end:step=default 1]
     print(numbers[::-1])  # reverse_start=66:end=1:step=1
@@ -195,12 +210,13 @@ def learn_list_tuple_set_func(learn):
     fruits_copy = fruits  # List is MUTABLE
     print(id(fruits), ": ", fruits)
     print(id(fruits_copy), ": ", fruits_copy)
-    print(fruits == fruits_copy)
-    print(fruits is fruits_copy)
+    print(fruits == fruits_copy)  # == checks value
+    print(fruits is fruits_copy)  # is checks memory location
     fruits_copy[3] = "figs"
     print(id(fruits), ": ", fruits)
     print(id(fruits_copy), ": ", fruits_copy)
 
+    fruits = ["apple", "banana", "cherry", "dates"]
     fruits_copy = ["apple", "banana", "cherry", "dates"]
     print(id(fruits), ": ", fruits)
     print(id(fruits_copy), ": ", fruits_copy)
@@ -229,9 +245,9 @@ def learn_list_tuple_set_func(learn):
     print(sFruits.difference(sFruits2))  # sFruits - sFruits2
     print(sFruits.union(sFruits2))  # all
 
-    print(f"empty list: {[]} or {list()}")
-    print(f"empty tuple: {()} or {tuple()}")
-    print("empty tuple: ", type({}), type(set()))
+    print(f"empty list: {[]} or {list()}")  # [] or list()
+    print(f"empty tuple: {()} or {tuple()}")  # () or tuple()
+    print("empty set: ", type({}), type(set()))  # only set(). {} is empty dictionary
 
 
 def learn_number_func(learn):
