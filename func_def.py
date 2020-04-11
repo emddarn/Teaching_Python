@@ -8,16 +8,22 @@ def learn_loops(isLearning):
     if not isLearning:
         return
     for i in range(10):  # for(int i=0;i<=10;i++){.....}
+        if i == 5:
+            print("breaking loop at five")
+            break
+        if i == 3:
+            print("skipping three")
+            continue
         print(i)
 
-    print("\n Learning while loop")
+    print("\nLearning while loop")
     i = 0
     while i < 6:
         i += 1
         if i == 4:  # There's no switch in Python
-            print("==4")
+            print("in i==4")
         elif i > 2:
-            print("in > 2")  # jump back to while
+            print("in i > 2")  # jump back to while
         # i += 1 # infinite loop at 2 if increment is here
         else:
             print(i)
