@@ -54,3 +54,5 @@ print("greetings: ", greetings)
 # student_info("First Argument", courses, info)
 # print()
 # student_info("First Argument", *courses, **info)
+
+print(__name__)

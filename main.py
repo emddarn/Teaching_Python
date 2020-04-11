@@ -7,7 +7,8 @@ def main():
     func_def.learn_list_tuple_set_func(False)
     func_def.learn_dictionary_func(False)
     func_def.learn_if_elif_else(False)
-    func_def.learn_loops(True)
+    func_def.learn_loops(False)
 
 
+print(__name__)
 main()

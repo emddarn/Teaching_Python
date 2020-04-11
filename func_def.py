@@ -1,6 +1,7 @@
 import math
 
 print("Hellow World from func_def")
+print(__name__)
 
 
 def learn_loops(isLearning):
