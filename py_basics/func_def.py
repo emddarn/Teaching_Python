@@ -1,7 +1,6 @@
 import math
 
-print("Hellow World from func_def")
-print(__name__)
+print("Hellow World from func_def __name__:", __name__)
 
 
 def learn_loops(isLearning):
@@ -254,7 +253,8 @@ def learn_list_tuple_set_func(learn):
 
     print(f"empty list: {[]} or {list()}")  # [] or list()
     print(f"empty tuple: {()} or {tuple()}")  # () or tuple()
-    print("empty set: ", type({}), type(set()))  # only set(). {} is empty dictionary
+    print("empty set: ", type({}), type(set()))  # only set(). {} or dict() is empty dictionary
+    # print("empty dictionary: ", {})
 
 
 def learn_number_func(learn):
