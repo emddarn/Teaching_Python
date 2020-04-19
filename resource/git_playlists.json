@@ -1,0 +1,53 @@
+{
+ "kind": "youtube#playlistListResponse",
+ "etag": "\"nxOHAKTVB7baOKsQgTtJIyGxcs8/yioon0Lqu_uU7hRQHkBEbThTrhA\"",
+ "pageInfo": {
+  "totalResults": 1,
+  "resultsPerPage": 50
+ },
+ "items": [
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"nxOHAKTVB7baOKsQgTtJIyGxcs8/xGUGXAdT9RLav3wHwU5YFjyO_0c\"",
+   "id": "PL-osiE80TeTuRUfjRe54Eea17-YfnOOAx",
+   "snippet": {
+    "publishedAt": "2015-04-29T16:30:49.000Z",
+    "channelId": "UCCezIgC97PvUuR4_gbFUs5g",
+    "title": "Git Tutorials",
+    "description": "Git Tutorials. An in-depth look at Git. Learn about Git commands, tips and tricks, walkthroughs, and best practices.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/FdZecVxzJbk/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/FdZecVxzJbk/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/FdZecVxzJbk/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/FdZecVxzJbk/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/FdZecVxzJbk/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Corey Schafer",
+    "localized": {
+     "title": "Git Tutorials",
+     "description": "Git Tutorials. An in-depth look at Git. Learn about Git commands, tips and tricks, walkthroughs, and best practices."
+    }
+   }
+  }
+ ]
+}
