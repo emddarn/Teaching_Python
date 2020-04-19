@@ -21,8 +21,8 @@ def youtube_util():
     playlist_file_info = "C:\\source\\001_learning\\resource\\git_playlists.json"
     # folder_name = ''
     file_details = get_file_details(download_dir)
-    # playlist_info = get_playlist_info_from_file(playlist_file_info, playlistitems_file_info)
-    playlist_info = get_playlist_info_from_URL(playlist_id)
+    playlist_info = get_playlist_info_from_file(playlist_file_info, playlistitems_file_info)
+    # playlist_info = get_playlist_info_from_URL(playlist_id)
     move_files_to_folder(download_dir, file_details, playlist_info)
     
 
@@ -128,15 +128,18 @@ def move_files_to_folder(download_dir, file_details, playlist_info):
     playlist_info = playlist_info['playlist_info']
 
     dir = os.path.join(download_dir,folder_name)
-    os.makedirs(dir)
+    if(not os.path.exists(dir)):
+        os.makedirs(dir)
 
     for key, value in playlist_info.items():
         # print(key, len(key))
         if key in file_details.keys():
             print(key, ' - key found in file_details')
             # build new_file_name
-            f_name = value['title']
+            
             playlist_pos = str(value['playlist_pos']+1).zfill(2)
+            # f_name = value['title'] can contain : in title
+            f_name = file_details[key][0]
             f_orig = file_details[key][1]
             f_ext = file_details[key][2]
             # dst = "C:\\Users\\mdari\\Downloads\\python_learning_download\\folder_name\\f_name.f_ext"
